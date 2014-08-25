@@ -6,7 +6,11 @@ if(MANUFACTURERS_CAROUSEL_ENABLED == "true"){
     order by manufacturers_name";
   $manufacturers = $db->Execute($manufacturers_query);
 ?>
-
+<link rel="stylesheet" href="<?php echo $template->get_template_dir('',DIR_WS_TEMPLATE, $current_page_base,'css') ?>/manufacturers_carousel.css">
+<link rel="stylesheet" href="<?php echo $template->get_template_dir('',DIR_WS_TEMPLATE, $current_page_base,'css') ?>/manufacturers_carousel_theme.css">
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="<?php echo $template->get_template_dir('',DIR_WS_TEMPLATE, $current_page_base,'jscript/jquery'); ?>/manufacturers_carousel.min.js"></script>
 <div id="ld_manufacturerscarousel" class="owl-carousel" style="width:<?php echo MANUFACTURERS_CAROUSEL_WIDTH ?>px;">
   <?php while (!$manufacturers->EOF){ ?>
   <div> 
@@ -19,5 +23,6 @@ if(MANUFACTURERS_CAROUSEL_ENABLED == "true"){
     }
   ?>
 </div>
-<?php
+<?php require($template->get_template_dir('manufacturers_carousel.php',DIR_WS_TEMPLATE, $current_page_base,'jscript/jquery'). '/manufacturers_carousel.php');?>
+    <?php
 }
