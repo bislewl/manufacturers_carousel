@@ -30,9 +30,6 @@ Backup your ZenCart database and any and all applicable files before proceeding.
 Requirements:
 =============
 
-CSS/JS Loader Installed available here: http://www.zen-cart.com/downloads.php?do=file&id=1774
-
-
 
 Install:
 ========
@@ -41,8 +38,7 @@ Install:
 2. Upload the files in the YOUR_TEMPLATE directory to the directory that holds your template
 3. Upload the files renaming YOUR_ADMIN to you admin directory
 4. Once you load your admin the module will self install.
-5. Modify the includes/templates/YOUR_TEMPLATE/auto_loader/loader_manufacturers.php to only load on the pages you wish (this will lighten the page load), versus loading on ever page
-6. Add the code below to where you would like the carousel to appear:
+5. Add the code below to where you would like the carousel to appear:
 <?php require($template->get_template_dir('tpl_manufacturers_carousel.php',DIR_WS_TEMPLATE, $current_page_base,'templates'). '/tpl_manufacturers_carousel.php');?>
 
 
