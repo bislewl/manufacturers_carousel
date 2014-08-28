@@ -4,6 +4,7 @@ if(MANUFACTURERS_CAROUSEL_ENABLED == "true"){
     from " . TABLE_MANUFACTURERS . " m
     left join " . TABLE_MANUFACTURERS_INFO . " mi on m.manufacturers_id = mi.manufacturers_id
     order by manufacturers_name";
+  global $db;
   $manufacturers = $db->Execute($manufacturers_query);
 ?>
 <link rel="stylesheet" href="<?php echo $template->get_template_dir('',DIR_WS_TEMPLATE, $current_page_base,'css') ?>/manufacturers_carousel.css">
